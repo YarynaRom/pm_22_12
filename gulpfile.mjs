@@ -25,7 +25,7 @@ function compileSass() {
         .pipe(dest('dist/css'))
         .pipe(browserSync.stream());
 }
-
+gi
 // Мінімізація JS
 function minifyJs() {
     return src('app/js/*.js')
