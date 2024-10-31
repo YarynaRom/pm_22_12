@@ -1,8 +1,25 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+$rale: "Raleway", sans-serif;
+@mixin raleway($weight, $style){
+  font-family: $rale;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+.raleway-normal {
+  @include raleway(400, normal);
+}
+.raleway-bold {
+  @include raleway(800, normal);
+}
+.raleway-italic {
+  @include raleway(500, italic);
+}
 
 body {
   overflow-x: hidden;
-  font-family: "DejaVu Sans", sans-serif;
+  font-family: $rale;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -20,7 +37,7 @@ body {
   flex-direction: row;
 }
 
-.left-col, .right-col {
+.right-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,11 +46,16 @@ body {
 }
 
 .left-col {
+  //flex-direction: column;
+  //justify-content: center;
+  padding-left: 110px;
+  padding-right: 0;
+  margin-right: 0;
   margin-top: 0;
   background-color: #29343a;
   color: white;
   width: 50%;
-  align-items: center;
+  //align-items: center;
 }
 
 .right-col {
@@ -41,7 +63,7 @@ body {
   width: 50%;
 }
 .row{
-  display: flex;
+  //display: flex;
   //align-items: flex-start;
 }
 
@@ -56,8 +78,8 @@ body {
   color: white;
   flex: 0 0 20%;
   //width: 8%;
-  align-items: center;
-  display: flex;
+  //align-items: center;
+  //display: flex;
 }
 .right-col1 {
   flex: 0 0 80%;
@@ -85,13 +107,14 @@ body {
 }
 
 .left-col img {
+  margin-right: 0;
   width: 500px;
   height: 650px;
   object-fit: cover;
   margin-bottom: 40px;
   border: 10px solid white;
   border-right: 0;
-  align-self: flex-end;
+  //align-self: flex-end;
   margin-top: 0;
 }
 .profile-text {
@@ -120,11 +143,11 @@ body {
   //width: 100%;
   //max-width: 1200px;
   p{
-    font-family: 'DejaVu Sans', sans-serif;
+    font-family: $rale;
     padding-top:30px;
     text-align: justify;
     font-size: 26px;
-    font-weight: 20;
+    //font-weight: 20;
   }
   h2{
     font-size: 40px;
@@ -133,44 +156,45 @@ body {
     font-weight: 700;
    // justify-content: left;
     //text-align: left;
-    font-family: "DejaVu Sans" , sans-serif ;
+    font-family: $rale ;
     display: flex;
     padding-right: 5px;
   }
 }
 
 .education-header {
-  display: flex;
-  align-items: center;
+  //display: flex;
+  //align-items: center;
   margin-bottom: 20px;
 
   h2 {
     font-size: 40px;
-    align-items: center;
+    //align-items: center;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "DejaVu Sans", sans-serif;
-    margin-left: 10px; /* Відступ заголовка від іконки */
+    font-family: $rale;
+    //margin-left: 10px; /* Відступ заголовка від іконки */
   }
 }
 .education-item {
   margin-bottom: 40px;
-  position: relative;
+  //position: relative;
 }
 .education{
-  padding-right: 200px;
-  align-items: center;
+  //padding-right: 200px;
+  //align-items: center;
   margin-top: 40px;
   p{
+    font-size: 26px;
     text-align: left;
     text-transform: uppercase;
-    font-size: 1.3vw;
     margin: 5px 0;
   }
   h3{
+    font-size: 19px;
     text-transform: uppercase;
-    font-weight: 400;
-    font-family: "DejaVu Sans", sans-serif;
+    font-weight: 200;
+    font-family: $rale;
   }
 }
 .year {
@@ -187,20 +211,21 @@ body {
 .skills {
   padding-right: 140px;
   align-items: center;
-  font-family: "DejaVu Sans", sans-serif;
+  font-family: $rale;
   color: #ffffff;
   h2{
     font-size: 40px;
     align-items: center;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: $rale;
     display: flex;
     padding-right: 5px;
     justify-content: left;
   }
 }
 .skill {
+
   margin-top: 20px;
   margin-bottom: 15px;
   h6 {
@@ -214,7 +239,7 @@ body {
   display: inline-block;
 }
 .star {
-  font-size: 24px;
+  font-size: 22px;
   color: #ccc;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
@@ -230,7 +255,7 @@ body {
     font-size: 25px;
     margin: 10px 0;
     padding: 0;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: $rale;
   }
 }
 .contact-header {
@@ -240,7 +265,7 @@ body {
   h2 {
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: $rale;
   }
 }
 .contact-item {
@@ -266,14 +291,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: $rale;
   }
   p{
     font-size: 1.6vw;
     padding-right: 90px;
     text-align: right;
     margin: 5px 0;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: $rale;
   }
 }
 
@@ -282,7 +307,7 @@ body {
   p{
     text-align: justify;
     font-size: 21px;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: $rale;
   }
   h2{
     font-weight: 700;
@@ -290,16 +315,17 @@ body {
     display: flex;
     padding-right: 5px;
     justify-content: left;
-    font-family: "DejaVu Sans", sans-serif;
+    font-family: $rale;
   }
 }
 
 .timeline {
-  margin-left: 0;
+  margin-top: 40px;
+  margin-left: 0px;
   //margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
 }
 .timeline-item {
   display: flex;
