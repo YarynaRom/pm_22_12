@@ -1,0 +1,405 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+body {
+  overflow-x: hidden;
+  font-family: "DejaVu Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.resume {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-col, .right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 110px;
+  padding-right: 0;
+}
+
+.left-col {
+  margin-top: 0;
+  background-color: #29343a;
+  color: white;
+  width: 50%;
+  align-items: center;
+}
+
+.right-col {
+  background-color: #fff;
+  width: 50%;
+}
+.row{
+  display: flex;
+  //align-items: flex-start;
+}
+
+.col-1 {
+  background-color: #29343a;
+  display: flex;
+  flex-direction: column;
+}
+.left-col1 {
+  padding-left: 0;
+  background-color: #29343a;
+  color: white;
+  flex: 0 0 20%;
+  //width: 8%;
+  align-items: center;
+  display: flex;
+}
+.right-col1 {
+  flex: 0 0 80%;
+  padding-left: 20px;
+}
+
+.col-2 {
+  background-color: #fff;
+}
+.left-col2 {
+  background-color: #29343a;
+  color: white;
+  width: 8%;
+  align-items: center;
+  display: flex;
+}
+.right-col2 {
+  width: 92%;
+  padding-left: 0;
+}
+
+.right-col3 {
+  background-color: #fff;
+  width: 50%;
+}
+
+.left-col img {
+  width: 500px;
+  height: 650px;
+  object-fit: cover;
+  margin-bottom: 40px;
+  border: 10px solid white;
+  border-right: 0;
+  align-self: flex-end;
+  margin-top: 0;
+}
+.profile-text {
+  color: #fff; /* Білий колір тексту */
+  text-align: center;
+  writing-mode: vertical-rl; /* Вертикальне розміщення тексту */
+  text-orientation: upright;
+}
+
+.profile-text h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile-text p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.about-me{
+  align-items: center;
+  margin-top:25px;
+  padding-right: 110px;
+  //width: 100%;
+  //max-width: 1200px;
+  p{
+    font-family: 'DejaVu Sans', sans-serif;
+    padding-top:30px;
+    text-align: justify;
+    font-size: 26px;
+    font-weight: 20;
+  }
+  h2{
+    font-size: 40px;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+   // justify-content: left;
+    //text-align: left;
+    font-family: "DejaVu Sans" , sans-serif ;
+    display: flex;
+    padding-right: 5px;
+  }
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 40px;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "DejaVu Sans", sans-serif;
+    margin-left: 10px; /* Відступ заголовка від іконки */
+  }
+}
+.education-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+.education{
+  padding-right: 200px;
+  align-items: center;
+  margin-top: 40px;
+  p{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    margin: 5px 0;
+  }
+  h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "DejaVu Sans", sans-serif;
+  }
+}
+.year {
+  color: #02c5db;
+}
+.timeline-item:nth-child(2) ~ .right-col1 .education-item:nth-child(1) {
+  margin-top: -100px;
+}
+
+.timeline-item:nth-child(3) ~ .right-col1 .education-item:nth-child(2) {
+  margin-top: -90px;
+}
+
+.skills {
+  padding-right: 140px;
+  align-items: center;
+  font-family: "DejaVu Sans", sans-serif;
+  color: #ffffff;
+  h2{
+    font-size: 40px;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "DejaVu Sans", sans-serif;
+    display: flex;
+    padding-right: 5px;
+    justify-content: left;
+  }
+}
+.skill {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  h6 {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+}
+.stars {
+  display: inline-block;
+}
+.star {
+  font-size: 24px;
+  color: #ccc;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.star.filled {
+  color: #02c5db;
+}
+
+.contact-me{
+  margin-top: 130px;
+  p{
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+    margin: 10px 0;
+    padding: 0;
+    font-family: "DejaVu Sans", sans-serif;
+  }
+}
+.contact-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "DejaVu Sans", sans-serif;
+  }
+}
+.contact-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline-item:nth-child(2) ~ .right-col3 .contact-item:nth-child(1) {
+  margin-top: -30px;
+}
+.timeline-item:nth-child(3) ~ .right-col3 .contact-item:nth-child(2) {
+ margin-top: -30px;
+}
+.timeline-item:nth-child(4) ~ .right-col3 .contact-item:nth-child(3) {
+ margin-top: -30px;
+}
+
+.references{
+  margin-bottom: 50px;
+  h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "DejaVu Sans", sans-serif;
+  }
+  p{
+    font-size: 1.6vw;
+    padding-right: 90px;
+    text-align: right;
+    margin: 5px 0;
+    font-family: "DejaVu Sans", sans-serif;
+  }
+}
+
+.job-experience{
+  text-align: left;
+  p{
+    text-align: justify;
+    font-size: 21px;
+    font-family: "DejaVu Sans", sans-serif;
+  }
+  h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    padding-right: 5px;
+    justify-content: left;
+    font-family: "DejaVu Sans", sans-serif;
+  }
+}
+
+.timeline {
+  margin-left: 0;
+  //margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  background-color: #02c5db;
+  color: #29343a;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.icon-circle {
+  margin-right: 20px;
+  background-color: #02c5db;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-circle1 {
+  //display: inline-block;
+  display: flex;
+  //vertical-align: middle;
+  margin-right: 20px;
+  background-color: #02c5db;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.circle {
+  background-color: #02c5db;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+.line {
+  width: 3px;
+  height: 60px;
+  background-color: #02c5db;
+}
+.line1 {
+  width: 3px;
+  height: 30px;
+  background-color: #02c5db;
+}
+.line2 {
+  width: 3px;
+  height: 100px;
+  background-color: #02c5db;
+}
+.line3 {
+  width: 3px;
+  height: 40px;
+  background-color: #02c5db;
+}
+.line4 {
+  width: 3px;
+  height: 280px;
+  background-color: #02c5db;
+}
+.line5 {
+  width: 3px;
+  height: 50px;
+  background-color: #02c5db;
+}
+.line6 {
+  width: 3px;
+  height: 240px;
+  background-color: #02c5db;
+}
+.line7 {
+  width: 3px;
+  height: 150px;
+  background-color: #02c5db;
+}
+.line8 {
+  width: 3px;
+  height: 130px;
+  background-color: #02c5db;
+}
+.line9 {
+  width: 3px;
+  height: 110px;
+  background-color: #02c5db;
+}
+

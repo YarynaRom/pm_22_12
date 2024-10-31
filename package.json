@@ -18,7 +18,7 @@
   "description": "",
   "devDependencies": {
     "browser-sync": "^3.0.2",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
@@ -30,6 +30,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "cssnano": "^7.0.6",
     "sass": "^1.79.1"
   }
