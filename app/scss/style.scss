@@ -11,7 +11,7 @@ $rale: "Raleway", sans-serif;
   @include raleway(400, normal);
 }
 .raleway-bold {
-  @include raleway(800, normal);
+  @include raleway(800, bold);
 }
 .raleway-italic {
   @include raleway(500, italic);
@@ -47,14 +47,15 @@ body {
 
 .left-col {
   //flex-direction: column;
-  //justify-content: center;
+  //justify-content: right;
+  //display: flex;
+  //justify-content: flex-end;
   padding-left: 110px;
   padding-right: 0;
   margin-right: 0;
-  margin-top: 0;
   background-color: #29343a;
   color: white;
-  width: 50%;
+  //width: 50%;
   //align-items: center;
 }
 
@@ -82,7 +83,7 @@ body {
   //display: flex;
 }
 .right-col1 {
-  flex: 0 0 80%;
+  //flex: 0 0 80%;
   padding-left: 20px;
 }
 
@@ -106,47 +107,70 @@ body {
   width: 50%;
 }
 
-.left-col img {
+.Name {
+  writing-mode: tb-rl; /* Вертикальне написання */
+  transform: rotate(-180deg); /* Поворот тексту */
+  font-size: 1rem;
+
+  .first-name {
+font-family: $rale;
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+  }
+
+.position-work{
+  text-transform: uppercase;
+font-family: $rale;
+  font-size:20px;
+  margin: 0;
+  text-align: end;
+ }
+}
+.img-fluid{
+  //align-items: end;
+          // float: right;
+  float: right;
   margin-right: 0;
-  width: 500px;
-  height: 650px;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
   margin-bottom: 40px;
   border: 10px solid white;
   border-right: 0;
+  //justify-content: right;
   //align-self: flex-end;
-  margin-top: 0;
+  //margin-top: 15rem;
 }
-.profile-text {
-  color: #fff; /* Білий колір тексту */
-  text-align: center;
-  writing-mode: vertical-rl; /* Вертикальне розміщення тексту */
-  text-orientation: upright;
+.name-foto{
+  padding-top: 5rem;
 }
+//.foto-and-about-me {
+  //flex-direction:column;
 
-.profile-text h1 {
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.profile-text p {
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
+//}
+//  width: 500px;
+//  height: 650px;
+//  object-fit: cover;
+//  margin-bottom: 40px;
+//  border: 10px solid white;
+//  border-right: 0;
+//  justify-content: right;
+//  //align-self: flex-end;
+//  margin-top: 0;
+//}
 .about-me{
-  align-items: center;
+  //align-items: center;
   margin-top:25px;
   padding-right: 110px;
   //width: 100%;
   //max-width: 1200px;
   p{
+    //align-items: first;
     font-family: $rale;
     padding-top:30px;
     text-align: justify;
-    font-size: 26px;
+    font-size: 23px;
     //font-weight: 20;
   }
   h2{
@@ -154,7 +178,7 @@ body {
     align-items: center;
     text-transform: uppercase;
     font-weight: 700;
-   // justify-content: left;
+    justify-content: left;
     //text-align: left;
     font-family: $rale ;
     display: flex;
