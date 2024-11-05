@@ -50,7 +50,7 @@ body {
   //justify-content: right;
   //display: flex;
   //justify-content: flex-end;
-  padding-left: 110px;
+  padding-left: 115px;
   padding-right: 0;
   margin-right: 0;
   background-color: #29343a;
@@ -74,17 +74,18 @@ body {
   flex-direction: column;
 }
 .left-col1 {
-  padding-left: 0;
+  padding: 0;
   background-color: #29343a;
   color: white;
-  flex: 0 0 20%;
+  //flex: 0 0 20%;
   //width: 8%;
   //align-items: center;
   //display: flex;
 }
 .right-col1 {
+  padding: 0;
   //flex: 0 0 80%;
-  padding-left: 20px;
+  //padding-left: 20px;
 }
 
 .col-2 {
@@ -114,7 +115,7 @@ body {
   text-align: end;
   .first-name {
 font-family: $rale;
-    font-size: 85px;
+    font-size: 80px;
     font-weight: 800;
     margin: 0;
   }
@@ -122,61 +123,45 @@ font-family: $rale;
 .position-work{
   text-transform: uppercase;
 font-family: $rale;
-  font-size:32px;
+  font-size:30px;
   margin: 0;
  // text-align: end;
   letter-spacing: 5px;
  }
 }
 .img-fluid{
-  //align-items: end;
-          // float: right;
   float: right;
   margin-right: 0;
   width: 30rem;
-  height: 40rem;
+  height: 38rem;
   object-fit: cover;
   margin-bottom: 40px;
-  border: 10px solid white;
+  border: 12px solid white;
   border-right: 0;
-  //justify-content: right;
-  //align-self: flex-end;
-  //margin-top: 15rem;
 }
 .name-foto{
   padding-top: 8rem;
   justify-content: space-between;
 }
-//.foto-and-about-me {
-  //flex-direction:column;
-
-//}
-//  width: 500px;
-//  height: 650px;
-//  object-fit: cover;
-//  margin-bottom: 40px;
-//  border: 10px solid white;
-//  border-right: 0;
-//  justify-content: right;
-//  //align-self: flex-end;
-//  margin-top: 0;
-//}
 .about-me{
   //align-items: center;
   margin-top:25px;
-  padding-right: 110px;
+  padding-right: 103px;
   //width: 100%;
   //max-width: 1200px;
   p{
+    //font-weight: 100;
+    //word-spacing: -1px;
     //align-items: first;
     font-family: $rale;
+    line-height: 1.7;
     padding-top:30px;
     text-align: justify;
-    font-size: 23px;
+    font-size: 26px;
     //font-weight: 20;
   }
   h2{
-    font-size: 40px;
+    font-size: 47px;
     align-items: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -189,53 +174,44 @@ font-family: $rale;
 }
 
 .education-header {
-  //display: flex;
-  //align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
   h2 {
-    font-size: 40px;
-    //align-items: center;
+    padding-top: 10px;
+    font-size: 47px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: $rale;
-    //margin-left: 10px; /* Відступ заголовка від іконки */
   }
 }
 .education-item {
-  margin-bottom: 40px;
-  //position: relative;
+  padding-top: 26px;
+  line-height: 1.3;
+}
+.education-item2 {
+  padding-top: 40px;
+  line-height: 1.3;
 }
 .education{
-  //padding-right: 200px;
-  //align-items: center;
   margin-top: 40px;
   p{
-    font-size: 26px;
+    font-size: 31px;
     text-align: left;
     text-transform: uppercase;
-    margin: 5px 0;
   }
   h3{
-    font-size: 19px;
+    font-size: 23px;
     text-transform: uppercase;
-    font-weight: 200;
     font-family: $rale;
   }
 }
 .year {
+  font-size: 27px;
   color: #02c5db;
-}
-.timeline-item:nth-child(2) ~ .right-col1 .education-item:nth-child(1) {
-  margin-top: -100px;
-}
-
-.timeline-item:nth-child(3) ~ .right-col1 .education-item:nth-child(2) {
-  margin-top: -90px;
 }
 
 .skills {
-  padding-right: 140px;
+  padding-right: 103px;
   align-items: center;
   font-family: $rale;
   color: #ffffff;
@@ -363,8 +339,8 @@ font-family: $rale;
 .icon {
   background-color: #02c5db;
   color: #29343a;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -375,8 +351,8 @@ font-family: $rale;
 .icon-circle {
   margin-right: 20px;
   background-color: #02c5db;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -398,59 +374,59 @@ font-family: $rale;
 
 .circle {
   background-color: #02c5db;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   margin: 10px 0;
 }
 
 .line {
-  width: 3px;
+  width: 4px;
   height: 60px;
   background-color: #02c5db;
 }
 .line1 {
-  width: 3px;
+  width: 4px;
   height: 30px;
   background-color: #02c5db;
 }
 .line2 {
-  width: 3px;
+  width: 4px;
   height: 100px;
   background-color: #02c5db;
 }
 .line3 {
-  width: 3px;
+  width: 4px;
   height: 40px;
   background-color: #02c5db;
 }
 .line4 {
-  width: 3px;
+  width: 4px;
   height: 280px;
   background-color: #02c5db;
 }
 .line5 {
-  width: 3px;
+  width: 4px;
   height: 50px;
   background-color: #02c5db;
 }
 .line6 {
-  width: 3px;
+  width: 4px;
   height: 240px;
   background-color: #02c5db;
 }
 .line7 {
-  width: 3px;
+  width: 4px;
   height: 150px;
   background-color: #02c5db;
 }
 .line8 {
-  width: 3px;
+  width: 4px;
   height: 130px;
   background-color: #02c5db;
 }
 .line9 {
-  width: 3px;
+  width: 4px;
   height: 110px;
   background-color: #02c5db;
 }
