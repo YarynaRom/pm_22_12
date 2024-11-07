@@ -102,7 +102,6 @@ font-family: $rale;
 font-family: $rale;
   font-size:30px;
   margin: 0;
- // text-align: end;
   letter-spacing: 5px;
  }
 }
@@ -196,7 +195,6 @@ font-family: $rale;
   }
 }
 .skill {
-
   margin-top: 20px;
   margin-bottom: 15px;
   h6 {
@@ -242,9 +240,29 @@ font-family: $rale;
 }
 .contact-item {
   font-size: 26px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   position: relative;
 }
+
+.left-col4{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 26vh;
+
+  .icon-circle1 {
+  display: flex;
+  margin-right: 20px;
+  background-color: #02c5db;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}}
+
 
 .job-experience{
   margin-top: 40px;
@@ -273,36 +291,39 @@ font-family: $rale;
 }
 .job-item {
   padding-top: 50px;
-  //line-height: 1.3;
 }
 .job-item2 {
   padding-top: 70px;
-  //line-height: 1.3;
 }
 .job-item3 {
   padding-top: 62px;
-  //line-height: 1.3;
 }
 
 .references{
-  margin-bottom: 50px;
+  margin-top: 40px;
   h2{
     font-size: 47px;
     font-weight: 700;
     text-transform: uppercase;
-    padding-right: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     font-family: $rale;
   }
   p{
     font-size: 1.6vw;
     padding-right: 90px;
-    text-align: right;
+    text-align: left;
     margin: 5px 0;
     font-family: $rale;
+    line-height: 1;
   }
+  h3{
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+}
+.references-item{
+  padding-top: 55px;
 }
 
 .timeline {
@@ -325,7 +346,7 @@ font-family: $rale;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 35px;
 }
 
 .icon-circle {
@@ -338,17 +359,7 @@ font-family: $rale;
   align-items: center;
   justify-content: center;
 }
-.icon-circle1 {
-  display: flex;
-  margin-right: 20px;
-  background-color: #02c5db;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-}
+
 
 .circle {
   background-color: #02c5db;
