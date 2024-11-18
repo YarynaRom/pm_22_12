@@ -136,7 +136,6 @@ font-family: $rale;
   margin-top:65px;
   padding-right: 103px;
   p{
-    //word-spacing: inherit;
     font-family: $rale;
     line-height: 1.7;
     padding-top:30px;
@@ -443,4 +442,11 @@ font-family: $rale;
   height: 110px;
   background-color: #02c5db;
 }
-
+.roll-block {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.roll {
+  cursor: pointer;
+}
