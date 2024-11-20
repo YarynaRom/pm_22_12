@@ -222,32 +222,30 @@ font-family: $rale;
 }
 .stars-container {
   margin-top: -5px;
+  display: flex;
   align-items: center;
 }
+
 .stars {
   display: inline-flex;
-//}
-.star {
-  font-size: 22px;
-  color: #ccc;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  cursor: pointer; // Додаємо курсор для інтерактивності
-  transition: color 0.3s ease;
-//}
-&.filled {
-  color: #02c5db; // Заповнена зірка
+
+  .star {
+    font-size: 22px;
+    color: #ccc;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &.hovered {
+      color: #02c5db;
+    }
+
+    &.filled {
+      color: #02c5db;
+    }
+  }
 }
 
-// При наведенні змінюємо колір для всіх попередніх зірок
-&:hover,
-&:hover ~ .star {
-  color: #02c5db;
-}
-}
-}
-//.star.filled {
-//  color: #02c5db;
-//}
 
 .contact-me{
   margin-top: 25px;

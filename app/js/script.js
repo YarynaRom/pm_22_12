@@ -15,42 +15,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     starContainers.forEach((container) => {
         const stars = container.querySelectorAll(".star");
-        let savedRating = 0; // Збережений рейтинг для кожного контейнера
+        let savedRating = 0; // Збережений рейтинг для кожного ряду
 
         stars.forEach((star, index) => {
-            // Подія наведення мишкою
+            // Наведення мишкою — підсвічуємо всі зірки до наведеної
             star.addEventListener("mouseover", () => {
                 resetStars();
                 highlightStars(index);
             });
 
-            // Подія кліку для фіксації рейтингу
-            star.addEventListener("click", () => {
-                savedRating = index + 1; // Зберігаємо рейтинг
-                console.log(`Рейтинг для цього контейнера: ${savedRating}`);
-            });
-
-            // Скидання підсвічування при знятті курсора
+            // Зняття мишки — показуємо збережений рейтинг
             star.addEventListener("mouseout", () => {
                 resetStars();
                 applySavedRating();
             });
+
+            // Клік — фіксуємо рейтинг
+            star.addEventListener("click", () => {
+                savedRating = index + 1; // Зберігаємо рейтинг
+                console.log(`Рейтинг збережено: ${savedRating}`);
+            });
         });
 
+        // Функція для скидання всіх зірок
         function resetStars() {
-            stars.forEach((star) => star.classList.remove("filled"));
+            stars.forEach((star) => {
+                star.classList.remove("hovered", "filled");
+            });
         }
 
+        // Функція для підсвічування зірок до наведеної
         function highlightStars(endIndex) {
             for (let i = 0; i <= endIndex; i++) {
-                stars[i].classList.add("filled");
+                stars[i].classList.add("hovered");
             }
         }
 
+        // Функція для застосування збереженого рейтингу
         function applySavedRating() {
-            if (savedRating > 0) {
-                highlightStars(savedRating - 1);
+            for (let i = 0; i < savedRating; i++) {
+                stars[i].classList.add("filled");
             }
         }
     });
 });
+
