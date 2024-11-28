@@ -50,16 +50,17 @@ gulp.task('img', async () => {
         .pipe(imagemin())
         .pipe(dest('dist/img'));
 });
+
 gulp.task("data", function () {
     return gulp
         .src("app/data/*.json")
-        .pipe(
-            fileInclude({
-                prefix: "@@",
-                basepath: "@file",
-            })
-        )
-        .pipe(gulp.dest("dist"))
+        // .pipe(
+        //     fileInclude({
+        //         prefix: "@@",
+        //         basepath: "@file",
+        //     })
+        // )
+        .pipe(dest("dist/data"))
         .pipe(browserSync.stream());
 });
 

@@ -1,28 +1,15 @@
+
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  },
-  "skills": [
+  "education": [
     {
-      "name": "Adobe Photoshop"
+      "institution": "Stanford University",
+      "degree": "Master Degree Graduate",
+      "year": "2011 - 2015"
     },
     {
-      "name": "Microsoft Word"
-    },
-    {
-      "name": "HTML-S/CSS-3"
-    },
-    {
-      "name": "Adobe Illustrator"
-    },
-    {
-      "name": "Microsoft Powerpoint"
+      "institution": "University of Chicago",
+      "degree": "Bachelor Degree Graduate",
+      "year": "2007 - 2010"
     }
   ]
 }
-
