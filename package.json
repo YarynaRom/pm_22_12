@@ -2,9 +2,6 @@
   "name": "romle",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YarynaRom/pm_22_12.git"
@@ -16,8 +13,15 @@
   },
   "homepage": "https://github.com/YarynaRom/pm_22_12#readme",
   "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "server": "cd ./dist/ && http-server -o --cors",
+    "dev": "concurrently \"npm run gulp\" \"npm run server\""
+  },
   "devDependencies": {
     "browser-sync": "^3.0.2",
+    "concurrently": "^9.1.0",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-concat": "^2.6.1",

@@ -1,4 +1,5 @@
 const { src, dest } = require('gulp');
+const fileInclude = require('gulp-file-include');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
@@ -49,6 +50,18 @@ gulp.task('img', async () => {
         .pipe(imagemin())
         .pipe(dest('dist/img'));
 });
+gulp.task("data", function () {
+    return gulp
+        .src("app/data/*.json")
+        .pipe(
+            fileInclude({
+                prefix: "@@",
+                basepath: "@file",
+            })
+        )
+        .pipe(gulp.dest("dist"))
+        .pipe(browserSync.stream());
+});
 
 // Watcher
 gulp.task('watch', () => {
@@ -57,6 +70,7 @@ gulp.task('watch', () => {
     gulp.watch('app/index.html', gulp.series('html'));
     gulp.watch('app/html/*.html', gulp.series('html'));
     gulp.watch('app/img/*', gulp.series('img'));
+    gulp.watch("app/data/*.json", gulp.series("data"));
 });
 
 // Update browser
@@ -69,5 +83,7 @@ gulp.task('browser-sync', () => {
     gulp.watch('./dist').on('change', browserSync.reload);
 });
 
+
 // Default task
-gulp.task('default', gulp.series('html', 'sass', 'uglify', 'img', gulp.parallel('browser-sync', 'watch')));
+gulp.task('default', gulp.series('html', 'sass', 'uglify', 'img','data', gulp.parallel('browser-sync', 'watch')));
+

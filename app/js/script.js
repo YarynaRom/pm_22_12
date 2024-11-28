@@ -59,4 +59,73 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+// Асинхронна функція для завантаження даних з data.json
+async function loadSkills() {
+    try {
+        // Завантажуємо файл data.json
+        const response = await fetch("http://127.0.0.1:8080", {
+            cache: "no-store",
+        });
+        if (!response.ok) {
+            throw new Error("Помилка при завантаженні даних");
+        }
+        const data = await response.json();
 
+        // Знаходимо секцію навичок у HTML
+        const skillsSection = document.getElementById("skill-text");
+        skillsSection.innerHTML = ""; // Очищаємо поточний вміст
+
+        // Розподіляємо навички по колонках
+        const columnCount = 2; // Кількість колонок
+        const columns = Array.from({ length: columnCount }, () =>
+            document.createElement("div")
+        );
+        columns.forEach((col) => col.classList.add("skills-column"));
+
+        // Додаємо кожну навичку
+        data.skills.forEach((skill, index) => {
+            // Створюємо елемент для навички
+            const skillDiv = document.createElement("div");
+            skillDiv.classList.add("skill");
+
+            // Додаємо прогрес-бар
+            const progressBar = document.createElement("div");
+            progressBar.classList.add("progress-bar");
+
+            const progress = document.createElement("div");
+            progress.classList.add("progress");
+            // progress.style.width = ${skill.progress}%; // Ширина залежить від прогресу
+            progress.setAttribute("data-progress", skill.progress);
+
+            // Додаємо назву навички
+            const skillName = document.createElement("span");
+            skillName.classList.add("skill-name");
+            skillName.textContent = skill.name;
+
+            // Збираємо елементи разом
+            progressBar.appendChild(progress);
+            skillDiv.appendChild(skillName);
+            skillDiv.appendChild(progressBar);
+
+            // Додаємо навичку до відповідної колонки
+            columns[index % columnCount].appendChild(skillDiv);
+        });
+
+        // Додаємо всі колонки в секцію
+        columns.forEach((col) => skillsSection.appendChild(col));
+
+        setTimeout(() => {
+            const progressBars = document.querySelectorAll(".progress");
+
+            progressBars.forEach((bar) => {
+                const progress = bar.getAttribute("data-progress"); // Отримуємо значення з data-progress
+                bar.style.width = progress + "%"; // Встановлюємо ширину для анімації
+            });
+        }, 500);
+    } catch (error) {
+        console.error("Помилка завантаження даних:", error);
+    }
+}
+
+// Викликаємо функцію при завантаженні сторінки
+document.addEventListener("DOMContentLoaded", loadSkills);
