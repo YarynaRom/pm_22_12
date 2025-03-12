@@ -80,7 +80,7 @@ function fetchData(url, options = {}) {
 // Асинхронна функція для отримання даних
 async function getData() {
     try {
-        const data = await fetchData("http://localhost:8080/data/data.json", { cache: "no-store" });
+        const data = await fetchData("http://localhost:8080/dist/data.json", { cache: "no-store" });
         console.log("Отримані дані:", data);
         renderData(data);
     } catch (error) {
